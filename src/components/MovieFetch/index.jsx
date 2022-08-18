@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
-import { GlobalContext } from '../../../GlobalContext';
+import { GlobalContext } from '../../GlobalContext';
 import Loading from '../Loading';
 import MoviesContainer from '../MovieContainer';
 import.meta.env.MODE;

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import GlobalStorage from '../GlobalContext';
+import GlobalStorage from './GlobalContext';
 import MovieFetch from './components/MovieFetch';
 import Sidebar from './components/Sidebar';
 

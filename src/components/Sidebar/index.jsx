@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import styles from './index.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faStar, faThumbsUp, faFire } from '@fortawesome/free-solid-svg-icons';
-import { GlobalContext } from '../../../GlobalContext';
+import { GlobalContext } from './../../GlobalContext';
 
 
 export default function Sidebar() {
