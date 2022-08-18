@@ -1,0 +1,51 @@
+.movieCard {
+  width: 300px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.movieCard::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #000;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+
+.moviePoster {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.movieInfo {
+  z-index: 1000;
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .3s;
+  user-select: none;
+}
+
+.movieTitle {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.movieCard:hover .movieInfo {
+  opacity: initial;
+}
+
+.movieCard:hover::after {
+  opacity: .8;
+}
