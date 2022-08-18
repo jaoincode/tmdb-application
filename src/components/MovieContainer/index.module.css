@@ -1,5 +1,47 @@
-.movieCard {
-  height: 200px;
-  background: black;
-  color: #fff;
+.moviesContainer {
+  margin-left: 100px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-blue), 
+    var(--primary-violet)
+  );
+  padding: 2rem;
+  width: calc(100% - 100px);
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1250px) {
+  .moviesContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .moviesContainer {
+    padding-top: 70px;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 840px) {
+  .moviesContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 660px) {
+  .moviesContainer {
+    padding: .5rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 415px) {
+  .moviesContainer {
+    padding-top: 120px;
+  }
 }

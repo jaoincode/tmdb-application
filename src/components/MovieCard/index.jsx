@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './index.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 export default function MovieCard({ ...props }) {
   const { title, overview, realese_date, id, poster_path, vote_average, adult } = props;
@@ -12,7 +14,8 @@ export default function MovieCard({ ...props }) {
         alt={`Capa do filme ${title ? title : ''}`}
       />
       <div className={styles.movieInfo}>
-        <h1 className={styles.movieTitle}>{title}</h1>
+        <h1 className="movieTitle">{title}</h1>
+        <button className={styles.verMais}>Ver mais</button>
         {/* <p className={styles.Overview}>{overview}</p> */}
       </div>
     </div>

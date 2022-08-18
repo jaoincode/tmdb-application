@@ -7,7 +7,7 @@ export default function MoviesContainer({ ...props }) {
 
   return (
     <section className={styles.moviesContainer}>
-      {movies.map(movie => <MovieCard {...movie} />)}
+      {movies.map(movie => <MovieCard key={movie.id} {...movie} />)}
     </section>
   )
 }
