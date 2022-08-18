@@ -34,3 +34,13 @@ ul, li {
   font-weight: 900;
   margin: 5px 10px;
 }
+
+.movieTitle span {
+  font-weight: 400;
+  padding: 3px;
+  background: var(--black);
+  margin: 10px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid var(--white);
+}

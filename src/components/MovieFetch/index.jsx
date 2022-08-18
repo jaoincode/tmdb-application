@@ -1,16 +1,20 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { GlobalContext } from '../../../GlobalContext';
 import MoviesContainer from '../MovieContainer';
 import.meta.env.MODE;
 
 const API_KEY = (import.meta.env.VITE_APP_APIKEY);
-const API_URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=pt-br`;
 
 export default function MovieFetch() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const { actualSection } = useContext(GlobalContext);
+
   useEffect(() => {
+    let API_URL = `https://api.themoviedb.org/3/movie/${actualSection}?api_key=${API_KEY}&language=pt-br`;
+
     setLoading(true);
     let cancel;
     axios.get(API_URL, {
@@ -22,7 +26,7 @@ export default function MovieFetch() {
       });
 
     return () => cancel();
-  }, []);
+  }, [actualSection]);
 
   if (loading) return <p>Loading</p>
   else return (

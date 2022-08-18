@@ -14,7 +14,10 @@ export default function MovieCard({ ...props }) {
         alt={`Capa do filme ${title ? title : ''}`}
       />
       <div className={styles.movieInfo}>
-        <h1 className="movieTitle">{title}</h1>
+        <h1 className="movieTitle">
+          {title}
+          <span>{vote_average}</span>
+        </h1>
         <button className={styles.verMais}>Ver mais</button>
         {/* <p className={styles.Overview}>{overview}</p> */}
       </div>
