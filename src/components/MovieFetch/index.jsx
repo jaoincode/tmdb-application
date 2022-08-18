@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../../GlobalContext';
+import Loading from '../Loading';
 import MoviesContainer from '../MovieContainer';
 import.meta.env.MODE;
 
@@ -28,7 +29,7 @@ export default function MovieFetch() {
     return () => cancel();
   }, [actualSection]);
 
-  if (loading) return <p>Loading</p>
+  if (loading) return <Loading />
   else return (
     <div>
       <MoviesContainer movies={movies} />

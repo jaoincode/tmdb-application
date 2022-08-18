@@ -8,17 +8,45 @@
   box-shadow: 5px 0px 30px rgba(0, 0, 0, 0.437);
   display: flex;
   justify-content: center;
+  transition: .3s;
+}
+
+.menu:hover {
+  width: 240px;
+}
+
+.menu:hover .menuList {
+  width: 100%;
+  align-items: flex-end;
+}
+
+.menu:hover .menuItem span {
+  display: inline-block;
 }
 
 .menuList {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .menuItem {
+  cursor: pointer;
   text-align: center;
-  width: 90px;
-  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  
+}
+
+.menuItem span {
+  display: none;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .icons {
@@ -28,8 +56,12 @@
   transition: .2s;
 }
 
-.icons:hover {
-  transform: scale(1.5);
+li:hover .icons {
+  transform: scale(1.2);
+  color: var(--secondary-violet);
+}
+
+li:hover span {
   color: var(--secondary-violet);
 }
 
@@ -57,6 +89,21 @@
   .icons {
     width: 25px;
     height: 25px;
+  }
+
+  .menuItem {
+    border: none;
+  }
+
+  .menu:hover {
+    width: 100%;
+  }
+  .menu:hover .menuList {
+    width: 100%;
+    align-items: center;
+  }
+  .menu:hover .menuItem span {
+    display: none;
   }
 }
 

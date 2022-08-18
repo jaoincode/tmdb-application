@@ -15,45 +15,41 @@ export default function Sidebar() {
           aria-label='Popular'
           onClick={() => setActualSection('popular')}
           className={styles.menuItem}>
-          <a href="#">
-            <FontAwesomeIcon
-              className={styles.icons}
-              icon={faHome}
-            />
-          </a>
+          <span>Populares</span>
+          <FontAwesomeIcon
+            className={styles.icons}
+            icon={faHome}
+          />
         </li>
         <li
           aria-label='Filmes que estão por vir'
           onClick={() => setActualSection('upcoming')}
           className={styles.menuItem}>
-          <a href="#">
-            <FontAwesomeIcon
-              className={styles.icons}
-              icon={faFire}
-            />
-          </a>
+          <span>Por vir</span>
+          <FontAwesomeIcon
+            className={styles.icons}
+            icon={faFire}
+          />
         </li>
         <li
           aria-label='Mais assistidos agora'
           onClick={() => setActualSection('now_playing')}
           className={styles.menuItem}>
-          <a href="#">
-            <FontAwesomeIcon
-              className={styles.icons}
-              icon={faThumbsUp}
-            />
-          </a>
+          <span>Mais assistidos</span>
+          <FontAwesomeIcon
+            className={styles.icons}
+            icon={faThumbsUp}
+          />
         </li>
         <li
           aria-label='Mais bem avaliados'
           onClick={() => setActualSection('top_rated')}
           className={styles.menuItem}>
-          <a href="#">
-            <FontAwesomeIcon
-              className={styles.icons}
-              icon={faStar}
-            />
-          </a>
+          <span>Bem avaliados</span>
+          <FontAwesomeIcon
+            className={styles.icons}
+            icon={faStar}
+          />
         </li>
       </ul>
     </aside>
