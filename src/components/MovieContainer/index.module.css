@@ -36,7 +36,7 @@
 @media (max-width: 660px) {
   .moviesContainer {
     padding: .5rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

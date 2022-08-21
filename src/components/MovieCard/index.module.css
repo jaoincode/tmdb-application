@@ -107,8 +107,8 @@
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 660px) {
   .movieCard {
-    width: 310px;
+    width: 160px;
   }
 }

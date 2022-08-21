@@ -15,7 +15,7 @@ export default function Sidebar() {
         <li
           aria-label='Buscar filmes'
           className={styles.menuItem}>
-          <Link to="procurar">
+          <Link className={styles.link} to="procurar">
             <span>Buscar</span>
             <FontAwesomeIcon
               className={styles.icons}
