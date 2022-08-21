@@ -3,7 +3,8 @@ import styles from './index.module.css';
 import { Link } from 'react-router-dom';
 
 export default function MovieCard({ ...props }) {
-  const { title, id, poster_path, vote_average } = props;
+  const { title, id, poster_path, vote_average, isSearchMovie } = props;
+
 
   return (
     <div className={styles.movieCard}>
@@ -17,7 +18,7 @@ export default function MovieCard({ ...props }) {
           {title}
           <span>{vote_average}</span>
         </h1>
-        <Link to={`filme/${id}`}>
+        <Link to={`${isSearchMovie ? `../filme/${id}` : `filme/${id}`}`}>
           <button className={styles.verMais}>Ver mais</button>
         </Link>
       </div>

@@ -54,7 +54,7 @@ export default function Search() {
       </header>
       {!search && <div className={styles.empty}><h2>Procure por algo..</h2></div>}
       {loading && <Loading />}
-      {movies && <div className={styles.allMovies}><MoviesContainer movies={movies} /></div>}
+      {movies && <div className={styles.allMovies}><MoviesContainer movies={movies} isSearchMovie={true} /></div>}
     </section>
   )
 }
