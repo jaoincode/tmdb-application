@@ -1,9 +1,6 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import styles from './index.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
-import Movie from '../Movie';
 
 export default function MovieCard({ ...props }) {
   const { title, id, poster_path, vote_average } = props;

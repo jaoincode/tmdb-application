@@ -1,8 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import styles from './index.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faStar, faThumbsUp, faFire } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faStar, faThumbsUp, faFire, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { GlobalContext } from './../../GlobalContext';
+import { Link } from 'react-router-dom';
 
 
 export default function Sidebar() {
@@ -11,6 +12,17 @@ export default function Sidebar() {
   return (
     <aside className={styles.menu}>
       <ul className={styles.menuList}>
+        <li
+          aria-label='Buscar filmes'
+          className={styles.menuItem}>
+          <Link to="procurar">
+            <span>Buscar</span>
+            <FontAwesomeIcon
+              className={styles.icons}
+              icon={faSearch}
+            />
+          </Link>
+        </li>
         <li
           aria-label='Popular'
           onClick={() => setActualSection('popular')}

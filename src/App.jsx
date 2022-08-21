@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import GlobalStorage from './GlobalContext';
 import MovieFetch from './components/MovieFetch';
 import Sidebar from './components/Sidebar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Search from './components/Search';
 
 
 export default function App() {

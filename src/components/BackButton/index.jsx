@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function BackButton() {
   return (
-    <Link class={styles.link} to="/">
+    <Link className={styles.link} to="/">
       <FontAwesomeIcon className={styles.icon} icon=
         {faArrowLeft} />
     </Link>

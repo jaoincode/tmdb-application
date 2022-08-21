@@ -3,11 +3,7 @@ import styles from './index.module.css';
 import IMDBLogo from '../../assets/img/imdb.png';
 
 export default function MovieContent({ movie }) {
-  console.log(movie);
 
-  movie.genres.map(genre => console.log(genre.name, genre.id));
-
-  
   return (
     <section className={styles.allContent}>
       <div className={styles.content}>
